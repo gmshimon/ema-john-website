@@ -61,6 +61,18 @@
     position:absolute;
     bottom:0;
     width:100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.btn-cart p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color:#0E161A;
+    margin-right: 5px;
 }
 .btn-cart:hover{
     background: orange;

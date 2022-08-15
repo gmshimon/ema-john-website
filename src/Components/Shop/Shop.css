@@ -8,6 +8,11 @@
     gap:45px;
     margin: 100px 100px;
 }
-.cart-container{
-    
+@media screen and (min-width:1300px) {
+    .product-container{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:45px;
+        margin: 100px 70px; 
+    }
 }
