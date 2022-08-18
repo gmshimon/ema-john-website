@@ -4,21 +4,26 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = ({cart}) => {
+    let quantity = 0;
     let totalPrice = 0;
     let shippingPrice = 0;
     let grandTotalPrice = 0;
     let tax = 0;
+    
     cart.forEach(c=>{
-        totalPrice += c.price;
+        quantity += c.quantity;
+        totalPrice += (c.price*c.quantity);
         shippingPrice += c.shipping;
     });
+
     tax = totalPrice * 0.1;
     grandTotalPrice = totalPrice + shippingPrice + tax;
+
     return (    
         <div className="cart">
             <h5 style={{paddingTop:'28px'}}>Order Summary</h5>
             <div className="details-container">
-                <p className="details">Selected Items: {cart.length}</p>
+                <p className="details">Selected Items: {quantity}</p>
                 <p className="details">Total Price: ${totalPrice}</p>
                 <p className="details">Total Shipping Charge: ${shippingPrice}</p>
                 <p className="details">Tax: ${tax.toFixed(2)}</p>
