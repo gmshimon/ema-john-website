@@ -7,12 +7,14 @@
     grid-template-columns:repeat(4,1fr);
     gap:45px;
     margin: 100px 100px;
+    position:sticky;
+    top:80px;
 }
-@media screen and (min-width:1300px) {
+@media screen and (max-width:1400px) {
     .product-container{
         display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:45px;
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
         margin: 100px 70px; 
     }
 }
