@@ -1,4 +1,7 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 import useCart from "../../UseCart/useCart";
 import useProduct from "../../useProducts/UseProducts";
 import { removeFromDb } from "../../utilities/fakedb";
@@ -28,7 +31,19 @@ const Orders = () => {
         ))}
       </div>
       <div>
-            <Cart cart={cart} clearData={clearData}></Cart>
+            <Cart cart={cart} clearData={clearData}>
+            <Link to="/inventory">
+              <button className="btn-preview">
+                <p>
+                  Check Out{" "}
+                  <FontAwesomeIcon
+                    style={{ marginLeft: "5px" }}
+                    icon={faArrowRight}
+                  ></FontAwesomeIcon>
+                </p>
+              </button>
+            </Link>
+            </Cart>
         </div> 
     </div>
   );

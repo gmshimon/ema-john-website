@@ -34,12 +34,8 @@ const Cart = (props) => {
             <div className="btn-grp">
                 <button onClick={clearData} className="btn-clear">
                     <p>Clear <FontAwesomeIcon style={{marginLeft:'5px'}} icon={faTrash}></FontAwesomeIcon></p>
-                    
                 </button>
-                <button className="btn-preview">
-                    <p>Preview Order <FontAwesomeIcon style={{marginLeft:'5px'}} icon={faArrowRight}></FontAwesomeIcon></p>
-                    
-                </button>
+                {props.children}
             </div>
 
         </div>
