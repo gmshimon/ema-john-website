@@ -14,3 +14,12 @@
 .header-container a:hover{
     color: orange;
 }
+.header-container span{
+    text-decoration:none;
+    color: #ffff;
+    margin-left:32px;
+    cursor: pointer;
+}
+.header-container span:hover{
+    color: orange;
+}
