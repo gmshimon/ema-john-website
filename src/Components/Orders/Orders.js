@@ -14,7 +14,7 @@ const Orders = () => {
   const [cart, setCart,clearData] = useCart(products);
 
   const handleDeleteBtn = (id) => {
-    const rest = cart.filter(pd=>pd.id!==id)
+    const rest = cart.filter(pd=>pd._id!==id)
     setCart(rest);
     removeFromDb(id);
   }
@@ -24,7 +24,7 @@ const Orders = () => {
       <div style={{marginTop:'70px', marginLeft:'300px'}}>
         {cart.map((product) => (
           <ReviewItem 
-            key={product.id}
+            key={product._id}
             product={product}
             handleDeleteBtn={handleDeleteBtn}
         ></ReviewItem>
